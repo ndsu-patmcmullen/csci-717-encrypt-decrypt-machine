@@ -18,7 +18,7 @@ public class EncryptionMachineTest {
     private final EncryptionMachine encryptionMachine = new EncryptionMachine();
 
     @Test
-    void testMainZeroWordsToEncrypt() {
+    public void testMainZeroWordsToEncrypt() {
         String input = "test\n0\n";
         String expectedOutput =
             "Enter key: " +
@@ -29,7 +29,7 @@ public class EncryptionMachineTest {
     }
 
     @Test
-    void testMainSingleLetterKeySingleWordMessage() {
+    public void testMainSingleLetterKeySingleWordMessage() {
         String input = "a\n1\nhello\n";
         String expectedOutput =
             "Enter key: " +
@@ -41,7 +41,7 @@ public class EncryptionMachineTest {
     }
 
     @Test
-    void testMainMultiLetterKeyMultiWordMessage() {
+    public void testMainMultiLetterKeyMultiWordMessage() {
         String input = "csci\n9\nthe\nquick\nbrown\nfox\njumps\nover\nthe\nlazy\ndog\n";
         String expectedOutput =
             "Enter key: " +
@@ -61,7 +61,7 @@ public class EncryptionMachineTest {
     }
 
     @Test
-    void testMainRepeatingLetters() {
+    public void testMainRepeatingLetters() {
         String input = "wxx\n3\naaa\nbbb\nccc\n";
         String expectedOutput =
             "Enter key: " +
@@ -75,7 +75,7 @@ public class EncryptionMachineTest {
     }
 
     @Test
-    void testMainAllLetters() {
+    public void testMainAllLetters() {
         String input = "xyzabcdefghijklmnopqrstuvw\n1\nzyxwvutsrqponmlkjihgfedcba\n";
         String expectedOutput =
             "Enter key: " +
